@@ -44,19 +44,19 @@ pip install -r requirements.txt
 We recommend using distributed training for high performance.  
 **With V100x4 GPUs, CIFAR10 training takes about 16 hours (0.7 days), and CIFAR100 training takes about 62 hours (2.6 days).**
 
-To train the complete case model on CIFAR-10 with $nl=4000$, run this command:
+To train the complete case model on CIFAR-10 with $n_l=4000$, run this command:
 
 ```train
 python train.py --world-size 1 --rank 0 --multiprocessing-distributed --num_labels 4000 --dataset cifar10 --num_classes 10 --overwrite --modified_fixmatch --ulb_loss_ratio 0
 ```
 
-To train the Fixmatch on CIFAR-10 with $nl=4000$, run this command:
+To train the Fixmatch on CIFAR-10 with $n_l=4000$, run this command:
 
 ```train
 python train.py --world-size 1 --rank 0 --multiprocessing-distributed --num_labels 4000 --dataset cifar10 --num_classes 10 --overwrite --modified_fixmatch --ulb_loss_ratio 0.5
 ```
 
-To train the Fixmatch on CIFAR-10 with $nl=4000$, run this command:
+To train the Fixmatch on CIFAR-10 with $n_l=4000$, run this command:
 
 ```train
 python train.py --world-size 1 --rank 0 --multiprocessing-distributed --num_labels 4000 --dataset cifar10 --num_classes 10 --overwrite --debiased --ulb_loss_ratio 0.5
@@ -76,11 +76,8 @@ python eval.py --load_path model.pth --dataset cifar10 --num_classes 10
 
 ## Pre-trained Models
 
-You can download pretrained models here:
+You can find pretrained models on CIFAR-10 using $n_l=4000$ in the **saved_models/** directory.
 
-- [Complete Case](https://drive.google.com/mymodel.pth) trained on CIFAR-10 using $nl=4000$. 
-- [Fixmatch](https://drive.google.com/mymodel.pth) trained on CIFAR-10 using $nl=4000$. 
-- [DeFixmatch](https://drive.google.com/mymodel.pth) trained on CIFAR-10 using $nl=4000$. 
 
 ## Results
 
